@@ -1,0 +1,264 @@
+[
+    {
+        "sentence": "A P create purchase contract for 120 MT 1-Methoxy-2-Propanol from A & L Jeubis Nv at flat price of 80 USD at tolerance 2 % buyer through container from Australia to Belgium, payment PCACD as from shipped on board date",
+        "Tags": {
+            "applicableLawIdDisplayName": "Belgium Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "A & L Jeubis Nv"
+            "deliveryFromDateDisplayName": "2019-10-22T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2019-11-28T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Andenne, BE"
+            "destinationCountryIdDisplayName": "Belgium"
+            "destinationLocationGroupTypeIdDisplayName": "City"
+            "itemQtyDisplayName": "120"
+            "itemQtyUnitIdDisplayName": "MT"
+            "loadingLocationGroupTypeIdDisplayName": "City"
+            "originationCityIdDisplayName": "Abbot Point, AU"
+            "originationCountryIdDisplayName": "Australia"
+            "payInCurIdDisplayName": "USD"
+            "payInCurIdDisplayName": "2019-10-25T00:00:00.000+0000"
+            "paymentTermIdDisplayName": "PCACD as from shipped on board date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "1-Methoxy-2-Propanol"
+            "profitCenterIdDisplayName": "Chem-CIS"
+            "qualityDisplayName": "PGME"
+            "shipmentModeDisplayName": "Truck"
+            "strategyAccIdDisplayName": "MANUCHAR STRATEGY"
+            "taxScheduleCountryIdDisplayName": "Belgium"
+            "taxScheduleIdDisplayName": "Belgium extracommunity Goods 0%"
+            "toleranceDisplayName": "2"
+            "traderUserIdDisplayName": "A P"
+        }
+    },
+    {
+        "sentence":"create purchase contract by trader Anne Verbeeck for 120 KG Acetone from 4Tune Shipping, Slu at flat price of 100 USD at tolerance 5 % buyer through Barge from Brazil to Cannada, strategy MANUCHAR STRATEGY",
+        "Tags":{
+            "applicableLawIdDisplayName": "English Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "4Tune Shipping, Slu"
+            "deliveryFromDateDisplayName": "2019-10-22T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2019-11-28T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Alberta, CA"
+            "destinationCountryIdDisplayName": "Canada"
+            "destinationLocationGroupTypeIdDisplayName": "City"
+            incotermIdDisplayName: "CFR"
+            "itemQtyDisplayName": "120"
+            "itemQtyUnitIdDisplayName": "KG"
+            "loadingLocationGroupTypeIdDisplayName": "City"
+            "originationCityIdDisplayName": "Alvorada, BR"
+            "originationCountryIdDisplayName": "Brazil"
+            "payInCurIdDisplayName": "USD"
+            "payInCurIdDisplayName": "2019-10-25T00:00:00.000+0000"
+            "paymentTermIdDisplayName": "PCAD as from Invoice Date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Acetone"
+            "profitCenterIdDisplayName": "Chem-Position"
+            "qualityDisplayName": "Acetone"
+            "shipmentModeDisplayName": "Barge"
+            "strategyAccIdDisplayName": "MANUCHAR STRATEGY"
+            "taxScheduleCountryIdDisplayName": "Belgium"
+            "taxScheduleIdDisplayName": "Belgium inland Goods 21%"
+            "toleranceDisplayName": "5"
+            "traderUserIdDisplayName": "Anne Verbeeck"
+        }
+    },
+    {
+        "sentence":"Buy Almond Oil at flat price, tranport from china to chile, tax Belgium intracommunity Goods 6%",
+        "Tags":{
+            "deliveryFromDateDisplayName": "2019-12-13T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2020-04-15T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Santiago, CL"
+            "destinationCountryIdDisplayName": "Chile"
+            "itemQtyUnitIdDisplayName": "KG"
+            "originationCityIdDisplayName": "Beijing, CN"
+            "originationCountryIdDisplayName": "China"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Almond Oil"
+            "profitCenterIdDisplayName": "Chem-Caribs"
+            "qualityDisplayName": "Almond Oil"
+            "taxScheduleIdDisplayName": "Belgium intracommunity Goods 6%"
+        }
+    },
+    {
+        "sentence":"Buy 50000 KG Aluminium Bars at flat price, move from Ethiopia to France",
+        "Tags":{
+            "deliveryFromDateDisplayName": "2019-12-18T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2020-02-15T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Argenton, FR"
+            "destinationCountryIdDisplayName": "France"
+            "itemQtyDisplayName": "50000"
+            "itemQtyUnitIdDisplayName": "KG"
+            "originationCityIdDisplayName": "Addis Ababa, ET"
+            "originationCountryIdDisplayName": "Ethiopia"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Aluminium Bars"
+            "profitCenterIdDisplayName": "Expan-N-Africa"
+            "qualityDisplayName": "Aluminium round bars"
+            "taxScheduleIdDisplayName": "Belgium intracommunity Goods 6%"
+        }
+    },
+    {
+        "sentence":"50000 KG Aluminium Bars, Aluminium round Bars, incoterm CPT, cp A.N. Wallis &Co Ltd, law English Law through trader Barry Collard",
+        "Tags":{
+            "applicableLawIdDisplayName": "English Law"
+            "cpProfileIdDisplayName": "A.N. Wallis &Co Ltd"
+            "deliveryFromDateDisplayName": "2019-12-18T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2020-02-15T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Argenton, FR"
+            "destinationCountryIdDisplayName": "France"
+            incotermIdDisplayName: "CPT"
+            "itemQtyDisplayName": "50000"
+            "itemQtyUnitIdDisplayName": "KG"
+            "originationCityIdDisplayName": "Addis Ababa, ET"
+            "originationCountryIdDisplayName": "Ethiopia"
+            "paymentTermIdDisplayName": "PLC60 days from FCR Date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Aluminium Bars"
+            "profitCenterIdDisplayName": "Expan-N-Africa"
+            "qualityDisplayName": "Aluminium round bars"
+            "strategyAccIdDisplayName": "Select"
+            "taxScheduleIdDisplayName": "Belgium intracommunity Goods 6%"
+            "traderUserIdDisplayName": "Barry Collard"
+        }
+    },
+    {
+        "sentence":"Issue Inter Company Purchase contract under Belgium Law with General terms and conditions, buy 1200 KG Bentonite from Alvean, transport using truck from Greece to Switzerland",
+        "Tags":{
+            "applicableLawIdDisplayName": "Belgium Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            contractIssueDateDisplayName: "2019-10-24T00:00:00.000+0000"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "Alvean"
+            dealTypeDisplayName: "Inter Company"
+            "deliveryFromDateDisplayName": "2019-10-24T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2019-11-21T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Muttenz, CH"
+            "destinationCountryIdDisplayName": "Switzerland"
+            "destinationLocationGroupTypeIdDisplayName": "City"
+            "itemQtyDisplayName": "1200"
+            "itemQtyUnitIdDisplayName": "KG"
+            "loadingLocationGroupTypeIdDisplayName": "City"
+            "originationCityIdDisplayName": "Alimos, GR"
+            "originationCountryIdDisplayName": "Greece"
+            "payInCurIdDisplayName": "EUR"
+            "payInCurIdDisplayName": "2019-10-25T00:00:00.000+0000"
+            "paymentTermIdDisplayName": "PLC90 days from FCR Date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Bentonite"
+            "qualityDisplayName": "ALP 10 GREEN D 1"
+            "shipmentModeDisplayName": "Truck"
+            "strategyAccIdDisplayName": "MANUCHAR STRATEGY"
+            "taxScheduleCountryIdDisplayName": "Belgium"
+            "taxScheduleIdDisplayName": "Belgium intracommunity Goods 21%"
+            "toleranceDisplayName": "2"
+            toleranceLevelDisplayName: "Seller"
+            "traderUserIdDisplayName": "ACL User2"
+        }
+    },
+    {
+        "sentence":"Issue intra company purchase contract on 26-10-2019 from Belgium Trade Office under Belgium Law with General terms and conditions, 1600 MT coal at 2500 EUR, tax Belgium intracommunity Goods 21%, tolerance 2% Seller",
+        "Tags":{
+            "applicableLawIdDisplayName": "Belgium Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            contractIssueDateDisplayName: "2019-10-26T00:00:00.000+0000"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "Belgium Trade Office"
+            dealTypeDisplayName: "Intra Company"
+            "itemQtyDisplayName": "1600"
+            "itemQtyUnitIdDisplayName": "MT"
+            "payInCurIdDisplayName": "EUR"
+            "payInCurIdDisplayName": "2019-10-25T00:00:00.000+0000"
+            "paymentTermIdDisplayName": "PLC90 days from FCR Date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Coal"
+            "qualityDisplayName": "Coal"
+            "shipmentModeDisplayName": "Truck"
+            "strategyAccIdDisplayName": "MANUCHAR STRATEGY"
+            "taxScheduleCountryIdDisplayName": "Belgium"
+            "taxScheduleIdDisplayName": "Belgium intracommunity Goods 21%"
+            "toleranceDisplayName": "2"
+            toleranceLevelDisplayName: "Seller"
+            "traderUserIdDisplayName": "Cindy Rijs"
+        }
+    },
+    {
+        "sentence":"Issue purchase contract, trader Antoine Vandamme, FOB, cp Chemical Plus, Belgium Law , General terms and conditions",
+        "Tags":{
+            "applicableLawIdDisplayName": "Belgium Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "Chemical Plus"
+            incotermIdDisplayName: "FOB"
+            "paymentTermIdDisplayName": "PLC60 days from FCR Date"
+            "traderUserIdDisplayName": "Antoine Vandamme"
+        }
+    },
+    {
+        "sentence":"purchase contract, trader Dorien Aerts, incoterm FOB, cp Chemical Plus, Belgium Law , General terms and conditions, 4000 MT Castor oil in EUR flat price, from Ecudor to Denmark",
+        "Tags":{
+            "applicableLawIdDisplayName": "Belgium Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "Chemical Plus"
+            "deliveryFromDateDisplayName": "2019-10-23T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2019-11-21T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Ballebro, DK"
+            "destinationCountryIdDisplayName": "Denmark"
+            "destinationLocationGroupTypeIdDisplayName": "City"
+            incotermIdDisplayName: "FOB"
+            "itemQtyDisplayName": "4000"
+            "itemQtyUnitIdDisplayName": "MT"
+            "loadingLocationGroupTypeIdDisplayName": "City"
+            "originationCityIdDisplayName": "La Libertad, EC"
+            "originationCountryIdDisplayName": "Ecuador"
+            "payInCurIdDisplayName": "EUR"
+            "payInCurIdDisplayName": "2019-11-02T00:00:00.000+0000"
+            "paymentTermIdDisplayName": "PLC60 days from FCR Date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Castor Oil"
+            "profitCenterIdDisplayName": "Chem-Position"
+            "qualityDisplayName": "Castor oil"
+            "shipmentModeDisplayName": "Container"
+            "strategyAccIdDisplayName": "MANUCHAR STRATEGY"
+            "taxScheduleCountryIdDisplayName": "Belgium"
+            "taxScheduleIdDisplayName": "Belgium extracommunity Goods 0%"
+            "toleranceDisplayName": "4"
+            "traderUserIdDisplayName": "Dorien Aerts"
+        }
+    },
+    {
+        "sentence":"Buy 3000 MT Formic Acid from Chemical Plus in EUR at Flat price, Gahana to Finland, apply Belgium Law with General terms and conditions, tax - Belgium extracommunity Goods 0%, MANUCHAR STRATEGY",
+        "Tags":{
+            "applicableLawIdDisplayName": "Belgium Law"
+            "arbitrationIdDisplayName": "General terms and conditions"
+            "contractTypeDisplayName": "Purchase"
+            "cpProfileIdDisplayName": "Chemical Plus"
+            "deliveryFromDateDisplayName": "2019-10-23T00:00:00.000+0000"
+            "deliveryToDateDisplayName": "2019-11-21T00:00:00.000+0000"
+            "destinationCityIdDisplayName": "Ballebro, DK"
+            "destinationCountryIdDisplayName": "Finland"
+            "destinationLocationGroupTypeIdDisplayName": "City"
+            incotermIdDisplayName: "FOB"
+            "itemQtyDisplayName": "3000"
+            "itemQtyUnitIdDisplayName": "MT"
+            "loadingLocationGroupTypeIdDisplayName": "City"
+            "originationCityIdDisplayName": "La Libertad, EC"
+            "originationCountryIdDisplayName": "Ghana"
+            "payInCurIdDisplayName": "EUR"
+            "payInCurIdDisplayName": "2019-11-02T00:00:00.000+0000"
+            "paymentTermIdDisplayName": "PLC60 days from FCR Date"
+            "priceTypeIdDisplayName": "Flat"
+            "productIdDisplayName": "Formic Acid"
+            "profitCenterIdDisplayName": "Chem-Position"
+            "qualityDisplayName": "Methanoic"
+            "shipmentModeDisplayName": "Container"
+            "strategyAccIdDisplayName": "MANUCHAR STRATEGY"
+            "taxScheduleCountryIdDisplayName": "Belgium"
+            "taxScheduleIdDisplayName": "Belgium extracommunity Goods 0%"
+            "toleranceDisplayName": "4"
+            "traderUserIdDisplayName": "Dorien Aerts"
+        }
+    }
+]

@@ -1,0 +1,5 @@
+appid::objectid::JSON_name
+3bda4095-e08a-4063-9707-8672d493cfaa::e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51::CR_sentences
+e621d081-85cb-4951-adea-49b88d7f4ab0::8ca20157-5616-41ec-9fb5-fe8a733c948b::OMS_sentence
+5d907cd2-7785-4d34-bcda-aa84b2158415::5931082a-6e48-4e36-89ea-57aa2bdf50bc::contract_NLP_training
+5539617b-5075-4482-8bcc-26f76849eb89::26e782e8-89e5-40ea-a3be-63b320260b7d::CR_sentences

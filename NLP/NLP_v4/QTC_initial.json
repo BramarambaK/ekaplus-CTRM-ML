@@ -1,0 +1,41 @@
+[{
+		"sentence": "Purchase gasoil of Quality 10 PPM of Quantity 2000 MT Through CIF From 09-09-2019 till 13-09-2019 with Flat Pricetype",
+		"Tags": {
+			"contractTypeDisplayName": "Purchase",
+			"deliveryFromDate": "2019-09-09",
+			"deliveryToDate": "2019-09-13",
+			"incotermIdDisplayName": "CIF",
+			"itemQty": "2000",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality Quantity Through From till with Pricetype .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 PPM"
+		}
+	},
+	{
+		"sentence": "Buy Cotton of Quality 10 PPM of Quantity 2000 MT Through DAP",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "2000",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "Cottonof Quality of Quantity Through .",
+			"qualityDisplayName": "10 PPM",
+			"productIdDisplayName": "cotton"
+		}
+	},
+	{
+		"sentence": "Sell Gasoil 5000 Mt through Dap from 09-09-2019 till 13-09-2019",
+		"Tags": {
+			"contractTypeDisplayName": "sale",
+			"deliveryFromDate": "2019-09-09",
+			"deliveryToDate": "2019-09-13",
+			"incotermIdDisplayName": "Dap",
+			"itemQty": "5000",
+			"itemQtyUnitIdDisplayName": "Mt",
+			"o": "through from till .",
+			"productIdDisplayName": "Gasoil"
+		}
+	}
+]

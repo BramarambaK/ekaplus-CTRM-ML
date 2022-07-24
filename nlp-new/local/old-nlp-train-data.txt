@@ -1,0 +1,293 @@
+[{
+		"sentence": "Buy Corn",
+		"Tags": {
+			"contractTypeDisplayName": "Buy",
+			"productIdDisplayName": "corn"
+		}
+	},{
+		"sentence": "Purchase gasoil of Quality 10 PPM of Quantity 2000 MT Through CIF From 09-09-2019 till 13-09-2019 with Flat Pricetype",
+		"Tags": {
+			"contractTypeDisplayName": "Purchase",
+			"deliveryFromDate": "2019-09-09",
+			"deliveryToDate": "2019-09-13",
+			"incotermIdDisplayName": "CIF",
+			"itemQty": "2000",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality Quantity Through From till with Pricetype .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 PPM"
+		}
+	},
+	{
+		"sentence": "Buy Cotton of Quality 10 PPM of Quantity 2000 MT Through DAP",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "2000",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "Cottonof Quality of Quantity Through .",
+			"qualityDisplayName": "10 PPM",
+			"productIdDisplayName": "cotton"
+		}
+	},
+	{
+		"sentence": "Sell Gasoil 5000 Mt through Dap from 09-09-2019 till 13-09-2019",
+		"Tags": {
+			"contractTypeDisplayName": "sale",
+			"deliveryFromDate": "2019-09-09",
+			"deliveryToDate": "2019-09-13",
+			"incotermIdDisplayName": "Dap",
+			"itemQty": "5000",
+			"itemQtyUnitIdDisplayName": "Mt",
+			"o": "through from till .",
+			"productIdDisplayName": "Gasoil"
+		}
+	}, 
+	{
+		"sentence": "Sell 20 MT crude of Quality Brent Light on term CIF with delivery period starting 27-03-2020 till 13-04-2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "Sell",
+			"deliveryFromDate": "2020-03-27",
+			"deliveryToDate": "2020-04-13",
+			"incotermIdDisplayName": "CIF",
+			"itemQty": "20",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "crude",
+			"qualityDisplayName": "Brent Light",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	},
+	{
+		"sentence": "Sell 20 MT gasoil of Quality 10 ppm on term DAP with delivery period starting 07-03-2020 till 24-04-2020 with Flat Pricetype, originating from Iraq, Baghdad and delivering to Israel, Jerusalem.",
+		"Tags": {
+			"contractTypeDisplayName": "Sell",
+			"deliveryFromDate": "2020-03-07",
+			"deliveryToDate": "2020-04-24",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "20",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Israel",
+			"originationCityIdDisplayName":"Baghdad",
+			"destinationCityIdDisplayName":"Jerusalem",
+			"originationCountryIdDisplayName":"Iraq"
+		}
+	},
+	{
+		"sentence": "purchase 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting 27-03-2020 till 13-04-2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "2020-03-27",
+			"deliveryToDate": "2020-04-13",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	}, 
+	{
+		"sentence": "purchase 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting 27-03-2020 till 13-04-2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "2020-03-27",
+			"deliveryToDate": "2020-04-13",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	},
+{
+		"sentence": "purchase 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting 27th March 2020 till 13 April 2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "27th March 2020",
+			"deliveryToDate": "13 April 2020",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	}, {
+		"sentence": "purchase 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting  March 27th, 2020 till April 13th, 2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "March 27th, 2020",
+			"deliveryToDate": "April 13th, 2020",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	}, {
+		"sentence": "purchase 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting  27th Mar 2020 till 13th Apr 2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "27th Mar 2020",
+			"deliveryToDate": "13th Apr 2020",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	},{
+		"sentence": "Sell 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting  27th Mar 2020 till 13th Apr 2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "Sell",
+			"deliveryFromDate": "27th Mar 2020",
+			"deliveryToDate": "13th Apr 2020",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	}, 
+	{
+		"sentence": "purchase 100 MT gasoil of Quality 10 ppm on term DAP with delivery period starting 27th Mar 2020 till 13th Apr 2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "27th Mar 2020",
+			"deliveryToDate": "13th Apr 2020",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	},{
+		"sentence": "Sell 100 MT crude of Quality 10 ppm on term CIF with delivery period starting 27th Mar 2020 till 13th Apr 2020 with Flat Pricetype, originating from Australia, Canberra and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "Sell",
+			"deliveryFromDate": "27th Mar 2020",
+			"deliveryToDate": "13th Apr 2020",
+			"incotermIdDisplayName": "CIF",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "crude",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Canberra",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	},{
+		"sentence": "purchase 100 MT crude of Quality 10 ppm on term DAP with delivery period starting 27-03-2020 till 13-04-2020 with Flat Pricetype, originating from India, Chennai and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "purchase",
+			"deliveryFromDate": "2020-03-27",
+			"deliveryToDate": "2020-04-13",
+			"incotermIdDisplayName": "DAP",
+			"itemQty": "100",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "gasoil",
+			"qualityDisplayName": "10 ppm",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Chennai",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"India"
+		}
+	}, 	{
+		"sentence": "Sell 20 MT crude of Quality Brent Light on term DAP with delivery period starting 02-09-2020 till 01-10-2020 with Flat Pricetype, originating from Australia, Sydney and delivering to Argentina, Aguilares.",
+		"Tags": {
+			"contractTypeDisplayName": "Sell",
+			"deliveryFromDate": "2020-09-02",
+			"deliveryToDate": "2020-10-01",
+			"incotermIdDisplayName": "CIF",
+			"itemQty": "20",
+			"itemQtyUnitIdDisplayName": "MT",
+			"o": "of Quality on term with delivery period starting till with Pricetype originating from , and delivering to , .",
+			"priceTypeId": "Flat",
+			"productIdDisplayName": "crude",
+			"qualityDisplayName": "Brent Light",
+			"loadingLocationGroupTypeIdDisplayName":"City",
+			"destinationLocationGroupTypeId":"City",
+			"destinationCountryIdDisplayName":"Argentina",
+			"originationCityIdDisplayName":"Sydney",
+			"destinationCityIdDisplayName":"Aguilares",
+			"originationCountryIdDisplayName":"Australia"
+		}
+	}
+]

@@ -1,0 +1,7 @@
+# sklearn
+numpy
+pandas
+scipy
+boto3
+statsmodels
+requests

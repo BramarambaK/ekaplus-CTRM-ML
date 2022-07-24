@@ -1,0 +1,24 @@
+{
+    "pointer": [
+        "5539617b-5075-4482-8bcc-26f76849eb89"
+    ],
+    "qP": {
+        "from": "0",
+        "size": "200",
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "multi_match": {
+                            "query": "credit",
+                            "type": "phrase_prefix",
+                            "fields": [
+                                "*"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

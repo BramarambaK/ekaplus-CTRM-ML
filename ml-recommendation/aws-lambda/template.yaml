@@ -1,0 +1,132 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  recommendation-app
+
+  Sample SAM Template for recommendation-app
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+
+Parameters:
+  Stage:
+    Type: String
+    Default: dev  #you would change this for dev/prod
+
+Globals:
+  Function:
+    Environment:
+      Variables:
+        STACK_NAME: !Ref AWS::StackName
+Resources:
+  TrainRecommendationForAnUserFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.train_one
+      Runtime: python3.8
+      # Events:
+      #   TrainRecommendationForAnUser:
+      #     Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+      #     Properties:
+      #       Path: /train-recommendation-api
+      #       Method: post
+
+  TrainRecommendationForAllUsersFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.train_all
+      Runtime: python3.8
+      Policies:
+          Statement:
+            - Effect: Allow
+              Action:
+              - lambda:InvokeFunction
+              - lambda:InvokeAsync
+              - lambda:GetFunction
+              - lambda:GetFunctionConfiguration
+              - cloudformation:DescribeStacks
+              - cloudformation:DescribeStackResources
+              Resource: '*'
+      Events:
+        TrainRecommendationForAnAllUsers:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /train-recommendation-for-all-users
+            Method: post
+            RestApiId: !Ref RecommApidev
+
+  TrainRecommendationFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.train_all
+      Runtime: python3.8
+      Policies:
+          Statement:
+            - Effect: Allow
+              Action:
+              - lambda:InvokeFunction
+              - lambda:InvokeAsync
+              - lambda:GetFunction
+              - lambda:GetFunctionConfiguration
+              - cloudformation:DescribeStacks
+              - cloudformation:DescribeStackResources
+              Resource: '*'
+      Events:
+        TrainRecommendationFunctionEvent:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /train-recommendation
+            Method: post
+            RestApiId: !Ref RecommApidev
+
+  RecommApidev:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: dev
+  # GetRecommendationForAnUserFunction:
+  #   Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  #   Properties:
+  #     CodeUri: code/
+  #     Handler: app.recomm
+  #     Runtime: python3.6
+  #     Events:
+  #       GetRecommendationForAnUser:
+  #         Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+  #         Properties:
+  #           Path: /recommendation
+  #           Method: post
+# Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  # TrainRecommendationForAnUserApi:
+  #   Description: "API Gateway endpoint URL for Prod stage for TrainRecommendationForAnUser function"
+  #   Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/train-recommendation-api/"
+  # TrainRecommendationForAnUserFunction:
+  #   Description: "TrainRecommendationForAnUser Lambda Function ARN"
+  #   Value: !GetAtt TrainRecommendationForAnUserFunction.Arn
+  # TrainRecommendationForAnUserFunctionIamRole:
+  #   Description: "Implicit IAM Role created for TrainRecommendationForAnUser function"
+  #   Value: !GetAtt TrainRecommendationForAnUserFunctionRole.Arn
+    
+  # TrainRecommendationForAllUsersApi:
+  #   Description: "API Gateway endpoint URL for development stage for TrainRecommendationForAllUsers function"
+  #   Value: !Sub "https://${ApiDeployment}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/train-recommendation-for-all-users/"
+  # TrainRecommendationForAllUsersFunction:
+  #   Description: "TrainRecommendationForAllUsers Lambda Function ARN"
+  #   Value: !GetAtt TrainRecommendationForAllUsersFunction.Arn
+  # TrainRecommendationForAllUsersFunctionIamRole:
+  #   Description: "Implicit IAM Role created for TrainRecommendationForAllUsers function"
+  #   Value: !GetAtt TrainRecommendationForAllUsersFunctionRole.Arn 
+
+  # GetRecommendationForAnUserApi:
+  #   Description: "API Gateway endpoint URL for Prod stage for GetRecommendationForAnUser function"
+  #   Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/recommendation/"
+  # GetRecommendationForAnUserFunction:
+  #   Description: "GetRecommendationForAnUser Lambda Function ARN"
+  #   Value: !GetAtt GetRecommendationForAnUserFunction.Arn
+  # GetRecommendationForAnUserFunctionIamRole:
+  #   Description: "Implicit IAM Role created for GetRecommendationForAnUser function"
+  #   Value: !GetAtt GetRecommendationForAnUserFunctionRole.Arn

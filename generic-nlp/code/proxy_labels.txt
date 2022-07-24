@@ -1,0 +1,8 @@
+Invoice Price Unit
+Loading Country
+Price Month
+Delivery Period
+Delivery Period
+Price-Fix Option
+FX-Futures to Basis
+Discharge Country

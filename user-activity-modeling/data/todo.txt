@@ -1,0 +1,5 @@
+for a user:
+    a) Most popular workflows (acticities)
+    b) Recent workflows upto last five
+    c) Popular search (for given workflows)
+    d) recent search upto five (for given workflows)

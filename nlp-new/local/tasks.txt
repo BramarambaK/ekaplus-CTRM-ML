@@ -1,0 +1,5 @@
+Tasks:
+1) Public training API for NLP, that could be deployed on lambda.
+2) Create training data from input data from users.
+3) Train for an user per object and per app basis.
+4) 

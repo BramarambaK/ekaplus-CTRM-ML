@@ -1,0 +1,250 @@
+node {
+
+def version = 'test'
+
+def imageName = 'test'
+
+def finalImageName = 'test'
+
+def gradleFilePath ='NLP/NLP_v4/';
+
+def tag = 'test';
+
+def app
+
+ 
+
+ stage('Checkout from Github') {
+
+ 
+
+  // git branch: '${BranchName}',credentialsId:'rajeshkscredentials', url: 'https://github.com/ekaplus/CTRM-ML.git'
+  git branch: '${BranchName}',credentialsId:'f1c5ff59-c542-4205-a661-10e4af5b0c5f', url: 'https://github.com/ekaplus/CTRM-ML.git'
+
+
+ 
+
+    }
+
+             
+
+                stage('Get Version  & Image Name'){
+
+ 
+
+    if (isUnix()) {
+
+        dir("${gradleFilePath}") {
+
+       version = sh returnStdout: true, script: "grep -iR '^version' environment.properties | awk -F = '{print \$2 }'"
+
+                 version = version.replaceAll("[\r\n]+","");
+
+        echo "version is   -> ${version}"
+
+       
+
+        imageName = sh returnStdout: true, script: "grep -iR '^image_name' environment.properties | awk -F = '{print \$2 }'"
+
+                             imageName = imageName.replaceAll("[\r\n]+","");
+
+
+        dockerVolume = sh returnStdout: true, script: "grep -iR '^docker_volume' environment.properties | awk -F = '{print \$2 }'"
+
+                             dockerVolume = dockerVolume.replaceAll("[\r\n]+","");
+
+
+        echo "imageName is   -> ${imageName}"
+
+                             finalImageName = "${imageName}";
+
+                             echo "Final Image Name is   -> ${finalImageName}"
+
+                            
+
+                              tag = "${version}_${BranchName}";
+
+                             echo "Final Tag Name is   -> ${tag}"
+
+ 
+
+        }
+
+       
+
+    }
+
+  }
+
+ 
+
+ 
+
+//    stage('Gradle Build') {
+
+//     if (isUnix()) {
+
+//         dir("${gradleFilePath}") {
+
+//             sh "gradle build -x test"
+
+          
+
+//         }
+
+//     }
+
+// }
+
+ 
+
+stage('Remove existing Images if exists'){
+
+     if (isUnix()) {
+
+       
+
+      sh '''
+
+          echo  Removing image [ '''+finalImageName+''':latest ] if exists.
+
+          docker image rm  -f '''+finalImageName+''':latest 2>/dev/null || true
+
+           echo Removing image [ '''+finalImageName+''':'''+tag+''' ] if exists.
+
+           docker rmi  -f '''+finalImageName+''':'''+tag+''' 2>/dev/null || true
+
+          '''
+
+         
+
+         }
+
+   }
+
+stage('Upload to Nexus') {
+
+    if (isUnix()) {
+
+       dir("${gradleFilePath}") {
+
+            sh "zip -r nlp-api-${version}.zip ."
+
+            sh "curl -v -u admin:admin123 --upload-file nlp-api-${version}.zip http://192.168.1.94:8081/nexus/content/repositories/cac/com/eka/connect/nlp-api/${version}/"
+            
+            echo "Uploaded zip to nexus."
+        }
+
+    }
+
+}
+
+// stage('Build API Image') {
+
+//         /* This builds the actual image; synonymous to
+
+//          * docker build on the command line */
+
+//       dir("${gradleFilePath}")  {
+
+      
+
+//         sh '''
+
+//                              docker build --no-cache -f DockerFile -t 192.168.1.225:50000/'''+finalImageName+''':'''+tag+''' --build-arg version='''+version+''' .
+
+//        '''
+
+//       }
+
+//     }
+
+stage('Build API Image') {
+
+        /* This builds the actual image; synonymous to
+
+         * docker build on the command line */
+
+      dir("${gradleFilePath}")  {
+
+      
+
+        sh '''
+
+                             docker build -f Dockerfile -t 192.168.1.225:50000/'''+finalImageName+''':'''+tag+''' --build-arg version='''+version+''' .
+
+       '''
+
+      }
+
+    }
+
+
+stage('Create Docker Volume') {
+
+        /* This builds the actual image; synonymous to
+
+         * docker build on the command line */
+
+      dir("${gradleFilePath}")  {
+
+      
+
+       //  sh '''
+       //                       docker volume create ml-recommendation-volume 2>/dev/null || exit 0
+
+       // '''
+        sh '''
+                             docker volume create ${dockerVolume} 2>/dev/null || exit 0
+
+       '''
+
+      }
+
+    }
+
+
+stage('Push API to Registry ') {
+
+   
+
+           dir("${gradleFilePath}") {
+
+             
+
+         sh '''
+
+       
+
+        docker push 192.168.1.225:50000/'''+finalImageName+''':'''+tag+'''
+
+        docker image rm -f 192.168.1.225:50000/'''+finalImageName+''':'''+tag+''' 2>/dev/null || true
+
+       
+
+         '''
+
+          }
+
+    }
+
+   
+
+    stage('Deploy API') {
+
+              echo "remove container with name -> ${imageName}-${BranchName} if exists"
+
+              sh   "docker rm  -f ${imageName}-${BranchName} 2>/dev/null || true "
+
+   
+
+          sh "docker pull 192.168.1.225:50000/${finalImageName}:${tag}"
+
+          // sh "docker run -d -p ${port}:8080 --name ${imageName}-${BranchName} --env-file ${envFile}  192.168.1.225:50000/${finalImageName}:${tag}"
+          sh "docker run -d -p ${port}:3131 --name ${imageName}-${BranchName} --env-file ${envFile} 192.168.1.225:50000/${finalImageName}:${tag}"
+
+ 
+
+    }
+
+}

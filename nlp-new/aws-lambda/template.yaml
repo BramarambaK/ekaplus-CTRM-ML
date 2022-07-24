@@ -1,0 +1,131 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  aws-lambda
+
+  Sample SAM Template for aws-lambda
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Parameters:
+  Stage:
+    Type: String
+    Default: dev  #you would change this for dev/prod
+
+Globals:
+  Function:
+    Timeout: 120
+    Environment:
+      Variables:
+        NLP_S3_BUCKET: testing-engg
+Resources:
+  TrainNlpFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.train
+      Runtime: python3.7
+      Events:
+        TrainNlp:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /train-nlp
+            Method: post
+            RestApiId: !Ref NlpApiDev
+      Policies:
+        - AWSLambdaExecute
+        - Version: '2012-10-17' 
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:GetObjectACL
+                - s3:PutObject
+                - s3:ListBucket
+              Resource: 'arn:aws:s3:::testing-engg/*'
+            
+  ProcessSentenceFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.process_sentence
+      Runtime: python3.7
+      Events:
+        TrainNlp:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /process-sentence
+            Method: post
+            RestApiId: !Ref NlpApiDev
+      Policies:
+        - AWSLambdaExecute
+        - Version: '2012-10-17' 
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:GetObjectACL
+                - s3:PutObject
+                - s3:ListBucket
+              Resource: 'arn:aws:s3:::testing-engg/*'
+
+  ResetTrainingFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.reset
+      Runtime: python3.7
+      Events:
+        TrainNlp:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /reset
+            Method: post
+            RestApiId: !Ref NlpApiDev
+      Policies:
+        - AWSLambdaExecute
+        - Version: '2012-10-17' 
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:GetObjectACL
+                - s3:DeleteObject
+              Resource: 'arn:aws:s3:::testing-engg/*'
+  NlpApiDev:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: dev
+
+# Outputs:
+#   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+#   # Find out more about other implicit resources you can reference within SAM
+#   # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+#   TrainNlpApi:
+#     Description: "API Gateway endpoint URL for development stage for training nlp function"
+#     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/dev/train-nlp/"
+#   TrainNlpFunction:
+#     Description: "Train nlp Lambda Function ARN"
+#     Value: !GetAtt TrainNlpFunction.Arn
+#   TrainNlpFunctionIamRole:
+#     Description: "Implicit IAM Role created for Train nlp function"
+#     Value: !GetAtt TrainNlpFunctionRole.Arn
+
+#   ProcessSentenceApi:
+#     Description: "API Gateway endpoint URL for development stage for processing sentence function"
+#     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/dev/process-sentence/"
+#   ProcessSentenceFunction:
+#     Description: "Process sentence Lambda Function ARN"
+#     Value: !GetAtt ProcessSentenceFunction.Arn
+#   ProcessSentenceFunctionIamRole:
+#     Description: "Implicit IAM Role created for Process sentence function"
+#     Value: !GetAtt ProcessSentenceFunctionRole.Arn
+
+#   ResetTrainingApi:
+#     Description: "API Gateway endpoint URL for development stage for reset training function"
+#     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/dev/reset/"
+#   ResetTrainingFunction:
+#     Description: "reset training Lambda Function ARN"
+#     Value: !GetAtt ResetTrainingFunction.Arn
+#   ResetTrainingFunctionIamRole:
+#     Description: "Implicit IAM Role created for reset training function"
+#     Value: !GetAtt ResetTrainingFunctionRole.Arn

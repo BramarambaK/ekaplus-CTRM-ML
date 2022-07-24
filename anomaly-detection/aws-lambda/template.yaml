@@ -1,0 +1,70 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  sam-app
+
+  Sample SAM Template for sam-app
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 60
+    Environment:
+      Variables:
+        ANOMALY_S3_BUCKET: testing-engg
+
+Resources:
+  TrainAnomalyDetectionFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: code/
+      Handler: app.train_anomaly_
+      Runtime: python3.8
+      Events:
+        Train:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /train-anomaly-detection-model
+            Method: post
+            RestApiId: !Ref AnomalyApiDev
+      Policies:
+        - AWSLambdaExecute
+        - Version: '2012-10-17' 
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:GetObjectACL
+                - s3:PutObject
+                - s3:ListBucket
+              Resource: 'arn:aws:s3:::testing-engg/*'
+
+  CheckAnomalyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: code/
+      Handler: app.check_anomaly_
+      Runtime: python3.8
+      Events:
+        Check:
+          Type: Api
+          Properties:
+            Path: /check-anomaly
+            Method: post
+            RestApiId: !Ref AnomalyApiDev
+      Policies:
+        - AWSLambdaExecute
+        - Version: '2012-10-17' 
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:GetObjectACL
+                - s3:PutObject
+                - s3:ListBucket
+              Resource: 'arn:aws:s3:::testing-engg/*'
+
+  AnomalyApiDev:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: anomaly_dev

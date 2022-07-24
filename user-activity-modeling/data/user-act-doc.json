@@ -1,0 +1,36 @@
+{
+  "_id": "user_activity_recommendation",
+  "fields": {
+    "user_activity_predictions": {
+      "labelKey": "user_activity_predictions",
+      "user_activity_predictions": "User Activity Recommendation Data",
+      "isRequired": true
+    },
+    "user_id": {
+      "labelKey": "user_id",
+      "user_activity_predictions": "User ID",
+      "isRequired": false
+    },
+    "source_workflowtaskname": {
+      "labelKey": "source_workflowtaskname",
+      "source_workflowtaskname": "Source Workflow task name",
+      "isRequired": true
+    }
+  },
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [
+    "user_id",
+    "source_workflowtaskname"
+  ],
+  "name": "user_activity_recommendation",
+  "sys__UUID": "7f2d3974-ab9e-4cf8-a64d-cc5ff53f27ae",
+  "type": "object"
+}

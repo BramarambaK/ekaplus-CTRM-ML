@@ -1,0 +1,27 @@
+{
+    "userid": "2573",
+    "refType": "app",
+    "refTypeId": "app1",
+    "popularWorkflows": [
+        "list",
+        "create"
+    ],
+    "recentWorkflows": [
+        "list",
+        "edit",
+        "delete"
+    ],
+    "searchTerms": [
+        {
+            "​​​​workflow": "supplierListing",
+            "popularSearchTerms": [
+                1,
+                2
+            ],
+            "recentSearchTerms": [
+                1,
+                2
+            ]
+        }
+    ]
+}
